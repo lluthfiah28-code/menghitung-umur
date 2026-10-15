@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Program Hitung Umur</h2>
+    <tabel for="tahun">MASUKAN TAHUN LAHIR:</tabel>
+    <input type="number" id="tahun" placeholder="contoh: 2000">
+    <button onclick="hitungumur()">hitung</button>
+
+    <p id="hasil"></p>
+
+    <script>
+        function hitungumur() {
+            let tahunlahir = document.getElementById("tahun") .value;
+            let tahunsekarang = new Date() .getFullYear();
+            let umur = tahunsekarang - tahunlahir;
+            if (tahunlahir === "" || tahunlahir.trim() === "") {
+    hasil.innerHTML = "tahun lahir tidak boleh kosong";
+    hasil.style.color = "red";
+    return;
+}
+
+
+            document.getElementById("hasil").innerHTML=
+             "umur kamu sekarang adalah " + umur + "tahun.";
+            
+        }
+            </script>
+
+
+    
+</body>
+</html>
